@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>e4event.com</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/0d3236b76b.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.rateyo.css' %}"/>
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.mmenu.all.css' %}" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/meanmenu.min.css' %}"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'inner-page-style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<style>
+	body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .profile-container {
+            width: 80%;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .user-profile {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .user-profile img {
+            border-radius: 50%;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .user-profile p {
+            margin-bottom: 5px;
+        }
+
+        .profile-icons {
+            text-align: right;
+        }
+
+        .edit-profile {
+            color: #007bff;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .booking-history {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-history th, .booking-history td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .booking-history th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .review-form {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form label {
+            font-weight: bold;
+        }
+
+        .review-form select,
+        .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        .review-form button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+	</style>
+
+
+
+</head>
+<body>
+
+	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+		<header class="site-header">
+			<div class="top-header">
+				<div class="container">
+					<div class="top-header-left">
+						<div class="top-header-block">
+							<a href="mailto:info@educationpro.com" itemprop="email"><i class="fas fa-envelope"></i>  info@E4Eventpro.com</a>
+						</div>
+						<div class="top-header-block">
+							<a href="tel:+9779813639131" itemprop="telephone"><i class="fas fa-phone"></i> +91-9995552221</a>
+						</div>
+					</div>
+					<div class="top-header-right">
+						<div class="social-block">
+							<ul class="social-list">
+								<li><a href=""><i class="fab fa-viber"></i></a></li>
+								<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
+								<li><a href=""><i class="fab fa-twitter"></i></a></li>
+								<li><a href=""><i class="fab fa-skype"></i></a></li>
+							</ul>
+						</div>
+						<div >
+  							<p style="display:inline;margin-left:25px;color:white;">{{user5.name}}</p>
+<!--							<img src="/static/{{img2}}" height="60px" width="60px" style="display:inline;border-radius:10px;">-->
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- Top header Close -->
+			<div class="main-header">
+				<div class="container">
+					<div class="logo-wrap" itemprop="logo">
+						<img src="{% static 'e4events1.png' %}" alt="Logo Image" height="80px" width="200px">
+						<!-- <h1>E4Event</h1> -->
+					</div>
+					<div class="nav-wrap">
+						<nav class="nav-desktop">
+							<ul class="menu-list">
+								<li><a href="http://127.0.0.1:8000/eventapp/customer_prof/">Home</a></li>
+								<li class="menu-parent">Services
+									<ul class="sub-menu">
+										<li class="menu-parent">Occasions
+											<ul class="sub-menu">
+												<li><a href="">Wedding</a></li>
+												<li><a href="">Engagement</a></li>
+												<li><a href="">Reception</a></li>
+											</ul>
+										</li>
+										<li class="menu-parent">Parties
+											<ul class="sub-menu">
+												<li><a href="">Birthday Party</a></li>
+												<li><a href="">Bachelor Party</a></li>
+												<li><a href="">Private Party</a></li>
+											</ul>
+										</li>
+										<li class="menu-parent">Functions
+											<ul class="sub-menu">
+												<li><a href="">House Warming</a></li>
+												<li><a href="">Get Together</a></li>
+												<li><a href="">Other Family Functions</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+								<li><a href="http://127.0.0.1:8000/eventapp/about/">About</a></li>
+								<li><a href="http://127.0.0.1:8000/eventapp/first/">Gallery</a></li>
+								<li><a href="http://127.0.0.1:8000/eventapp/contact/">Contact</a></li>
+							</ul>
+						</nav>
+						<div id="bar">
+							<i class="fas fa-bars"></i>
+						</div>
+						<div id="close">
+							<i class="fas fa-times"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<br>
+
+
+
+		<h1 style="font-size:40px;text-shadow:1px 1px 1px black;"><CENTER>CUSTOMER PROFILE</CENTER></h1><br><br>
+	<div class="profile-container">
+        <div class="user-profile">
+            <div class="profile-icons">
+                <a href="http://127.0.0.1:8000/eventapp/eventteam/"><i class="fas fa-arrow-left fa-lg" style="font-size:20px;margin-right:20px;"></i></a>
+                <a href="http://127.0.0.1:8000/eventapp/customerprofedit/{{idd7}}"><i class="fas fa-edit fa-lg edit-profile" style="font-size:20px;"></i></a>
+            </div>
+            <img src="/static/{{img}}" alt="Profile Image">
+            <h2 class="mb-4" style="font-size:40px;">{{data.name}}</h2>
+            <p style="font-size:30px;"><strong>Email:</strong> {{data.email}}</p>
+            <p style="font-size:30px;"><strong>Phone:</strong> +91- {{data.phone}}</p>
+            <p style="font-size:30px;"><strong>Location:</strong> {{data.address}}</p>
+			<p style="font-size:30px;"> {{data.district}}</p>
+            <!-- Add more profile information as needed -->
+        </div><br><br>
+
+        <div>
+            <h2 class="mb-4" style="font-size:35px;text-shadow:1px 1px 1px black;"><center>Booking History</center></h2>
+            <table class="table booking-history">
+                <thead>
+                    <tr style="height:50px;">
+                        <th style="font-size:20px;">Date</th>
+                        <th style="font-size:20px;width:300px;">Event Team</th>
+                        <th style="font-size:20px;width:350px;">Location</th>
+                        <th style="font-size:20px;">Status</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+				{% for i,j,k,m in data1 %}
+                    <tr style="height:50px;">
+                        <td style="font-size:20px;">{{i}}</td>
+                        <td style="font-size:20px;">{{k}}</td>
+                        <td style="font-size:20px;">{{j}}</td>
+                        <td style="font-size:20px;"><input style="border:none;" value="booked" placeholder="Booked"></td>
+
+
+                    </tr>
+				{% endfor %}
+                    <!-- Add more rows for additional bookings -->
+                </tbody>
+            </table>
+        </div><br><br>
+
+        <div class="review-form">
+			<center>
+            <h2 class="mb-4" style="font-size:40px;text-shadow:1px 1px 1px black;">Write a Review</h2>
+			</center>
+            <form method="post" enctype="multipart/form-data">{% csrf_token %}
+				<div class="form-group">
+                    <label for="review" style="font-size:30px;">Name:</label>
+                    <input value="{{data.name}}" name="name" style="font-size:20px;width:100%; border:1px black;">
+                </div><br>
+                <div class="form-group">
+                    <label for="rating" style="font-size:30px;">Event Team:</label>
+                    <select class="form-control" id="rating1" name="eteam">
+                        <option value="5" >Choose the Team</option>
+						{% for i in data2 %}
+                        <option value="{{i.name}}">{{i.name}}</option>
+						{% endfor %}
+
+                    </select>
+                </div>
+				<div class="form-group">
+                    <label for="rating" style="font-size:30px;">Your Rating:</label>
+                    <select class="form-control" id="rating" name="rating">
+                        <option value="" >Choose the Rating</option>
+						<option value="5star">5 stars</option>
+                        <option value="4star">4 stars</option>
+                        <option value="3star">3 stars</option>
+                        <option value="2star">2 stars</option>
+                        <option value="1star">1 star</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="review" style="font-size:20px;">Your Review:</label>
+                    <textarea class="form-control" id="review" name="review" rows="4" placeholder="Write your review here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="font-size:15px;">Submit Review</button>
+            </form>
+        </div>
+    </div>
+	<br><br>
+
+
+<section class="what-other-say">
+
+		<div class="container">
+
+				<h4 class="article-subtitle">Brief Look for</h4>
+				<h2 class="head">Your Response</h2>
+
+
+				<div class="three owl-carousel owl-theme">
+					{% for i,j,k,l,m in data3 %}
+					<div class="customer-item" itemscope itemtype="http://schema.org/Rating">
+
+						<div class="border">
+							<a href="http://127.0.0.1:8000/eventapp/review_edit/{{m}}"><p style="margin-left:650px;display:inline;font-size:20px;"><i class="fa-solid fa-pen"></i></p></a>
+							<a href="http://127.0.0.1:8000/eventapp/review_delete/{{m}}"><p style="display:inline;font-size:20px;margin-left:10px;"><i class="fa-solid fa-trash"></i></p></a>
+							<div class="customer">
+								<figure>
+									<img class="customer-img" src="/static/{{l}}" alt="Person image" style="height:100px;width:250px;">
+									<figcaption>
+										<span itemprop="author">
+											{{i}}</span><br>
+<!--										<div class="rateYo" itemprop="ratingValue"></div>-->
+										{% if j == '5star' %}
+										<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+										{% endif %}
+										{% if j == '4star' %}
+										<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+										{% endif %}
+										{% if j == '3star' %}
+										<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+										{% endif %}
+										{% if j == '2star' %}
+										<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+										{% endif %}
+										{% if j == '1star' %}
+										<i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+										{% endif %}
+
+									</figcaption>
+								</figure>
+							</div>
+							<div class="customer-review">
+								<p itemprop="description">
+									{{k}}
+								</p>
+							</div>
+
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+
+		</div>
+	</section>
+
+
+
+          <!-- End of Query Section -->
+		<footer class="page-footer" itemprop="footer" itemscope itemtype="http://schema.org/WPFooter">
+			<div class="footer-first-section">
+				<div class="container">
+					<div class="box-wrap" itemprop="about">
+						<header>
+							<h1>about</h1>
+						</header>
+						<ul>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">About Us</a></li>
+
+						</ul>
+
+						<h4><a href="tel:+9779813639131"><i class="fas fa-phone"></i> +91-9995552221</a></h4>
+						<h4><a href="mailto:info@educationpro.com"><i class="fas fa-envelope"></i> info@E4Eventpro.com</a></h4>
+						<h4><a href=""><i class="fas fa-map-marker-alt"></i>Bangaluru,Karnataka</a></h4>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>links</h1>
+						</header>
+						<ul>
+							<li><a href="#">Cancellation</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Security</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Grievance Redressal</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>Social</h1>
+						</header>
+						<ul>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">Youtube</a></li>
+
+						</ul>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>quick contact</h1>
+						</header>
+						<section class="quick-contact">
+							<input type="email" name="email" placeholder="Your Email*">
+							<textarea placeholder="Type your message*"></textarea>
+							<button>send message</button>
+						</section>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of box-Wrap -->
+			<div class="footer-second-section">
+				<div class="container">
+					<hr class="footer-line">
+					<ul class="social-list">
+						<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter"></i></a></li>
+						<li><a href=""><i class="fab fa-skype"></i></a></li>
+						<li><a href=""><i class="fab fa-youtube"></i></a></li>
+						<li><a href=""><i class="fab fa-instagram"></i></a></li>
+					</ul>
+					<hr class="footer-line">
+				</div>
+			</div>
+			<div class="footer-last-section">
+				<div class="container">
+					<p>Copyright 2023 &copy; E4Eventpro.com <span> | </span> Theme designed and developed by <a href="https://labtheme.com">E4E</a></p>
+				</div>
+			</div>
+		</footer>
+
+
+	</div>
+	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/all.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.rateyo.js' %}"></script>
+	<!-- <script type="text/javascript" src="{% static 'js/jquery.mmenu.all.js' %}"></script> -->
+	<!-- <script type="text/javascript" src="{% static 'js/jquery.meanmenu.min.js' %}"></script> -->
+	<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: rgb(49, 40, 40);
+        }
+        #a{
+            background-image: url({% static 'cofee1.jpg' %});
+        }
+        #c{
+            background-image: url({% static 'order2.jpeg' %});
+        }
+        #d{
+            background-image: url({% static 'feedback.jpeg' %});
+        }
+        #b{
+            background-image: url({% static 'coffee6.jpeg' %});
+            background-size: 100%;
+        }
+        #aa{
+            background-image: url('/static/{{img}}');
+             background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="aa">
+    <div style="height: 700px;width: 800px ;background-color: rgb(227, 220, 220);margin-left: 280px;margin-top: 20px;">
+
+
+        <div style="height: 700px;width: 400px;background-color: rgb(240, 250, 240);float: left;">
+
+            <div style="height: 200px;width: 200px; background-color: rgb(90, 125, 90);border-radius: 90px;margin-left: 100px;margin-top: 50px;">
+                <img src="/static/{{img}}" alt="" style="height: 200px;width: 200px;border-radius: 90px;">
+            </div>
+            <center>
+            <h1 style="margin-left: 50px;text-shadow:3px 3px 3px grey">{{user.name}}</h1>
+            </center>
+            <div style="height: 280px;width: 300px;background-color: rgb(247, 249, 247);margin-left: 60px;">
+                <div style="height: 120px;width: 130px;background-color: rgb(235, 219, 219);float: left;margin-left: 10px;border-top-left-radius: 10px;" id="a">
+                    <center>
+                    <h3 style="margin-top:30px;text-decoration:None;"><a href="http://127.0.0.1:8000/eventapp/company_page/">View <br>Booking</a></h3>
+                    </center>
+                </div>
+                <div style="height: 120px;width: 130px;background-color: rgb(198, 200, 207);float: left;margin-left: 15px;border-top-right-radius: 10px;" id="b">
+                    <center>
+                        <h3 style="margin-top:30px;"><a href="http://127.0.0.1:8000/eventapp/company_page/">Approved Orders</a></h3>
+                        </center>
+                </div>
+
+                <div style="height: 120px;width: 130px;background-color: rgb(211, 223, 200);float: left;margin-left: 10px;margin-top: 10px;border-bottom-left-radius: 10px;" id="c">
+                        <center>
+                        <h3 style="margin-top: 35px;"><a href="http://127.0.0.1:8000/eventapp/company_page/">Cancelled Orders</a></h3>
+                        </center>
+                </div>
+                <div style="height: 120px;width: 130px;background-color: rgb(211, 216, 217);float: left;margin-left: 15px;margin-top: 10px;border-bottom-right-radius: 10px;" id="d">
+                    <center>
+                        <h3 style="margin-top:40px;"><a href="http://127.0.0.1:8000/eventapp/company_page/">Feedback</a></h3>
+                        </center>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="height: 700px;width: 400px;background-color: rgb(231, 238, 231);float: left;"><br>
+
+            <h2 style="margin-left: 100px;">Company Profile</h2>
+            <label for="" style="margin-left: 70px;">Name:</label>
+            <div style="height: 40px;width: 250px;background-color: rgb(222, 215, 215);border-radius: 10px;margin-left: 70px;">
+                <center>
+                <h4>{{user.name}}</h4>
+                </center>
+
+            </div><br>
+            <label for="" style="margin-left: 70px;">Email:</label>
+            <div style="height: 30px;width: 250px;background-color: rgb(229, 215, 215);border-radius: 10px;margin-left: 70px;">
+                <center>
+                <h3>{{user.email}}</h3>
+                </center>
+            </div><br>
+            <label for="" style="margin-left: 70px;">Phone Number:</label>
+            <div style="height: 30px;width: 250px;background-color: rgb(227, 209, 209);border-radius: 10px;margin-left: 70px;">
+                <center>
+                <h3>{{user.phone}}</h3>
+                </center>
+            </div><br>
+            <label for="" style="margin-left: 70px;">Company Address:</label>
+            <div style="height: 40px;width: 250px;background-color: rgb(216, 200, 200);border-radius: 10px;margin-left: 70px;">
+                <center>
+                <h3>{{user.address}}</h3>
+                </center>
+            </div><br>
+            <label for="" style="margin-left: 70px;">Location:</label>
+            <div style="height: 30px;width: 250px;background-color: rgb(218, 199, 199);border-radius: 10px;margin-left: 70px;">
+                <center>
+                <h3>{{user.district}}</h3>
+                </center>
+            </div><br>
+            <label for="" style="margin-left: 70px;">username:</label>
+            <div style="height: 30px;width: 250px;background-color: rgb(233, 220, 220);border-radius: 10px;margin-left: 70px;">
+               <center>
+                <h3>{{user.username}}</h3>
+               </center>
+
+                 <a href="http://127.0.0.1:8000/eventapp/sellerprofedit/{{user.id}}"><button type="submit" style="margin-left: 100px; margin-top: 20px;height: 30px;width: 80px;border-radius: 10px;background-color: rgb(233, 220, 220);box-shadow: 5px 5px 5px black;border: none;">Edit Profile</button></a>
+                    <br><a href="http://127.0.0.1:8000/eventapp/company_page/" style="margin-left:230px;">Back</a>
+
+            </div><br>
+<!--            <a href="http://127.0.0.1:8000/ecommerceapp/productview/" >Upload Items</a><br>-->
+<!--            <a href="http://127.0.0.1:8000/ecommerceapp/edit/{{data.id}}">Edit Profile</a>-->
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>

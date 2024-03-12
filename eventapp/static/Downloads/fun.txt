@@ -1,0 +1,46 @@
+from rest_framework.decorators import api_view
+
+@api_view(['GET','POST'])
+def empview(request):
+    if(request.method=='GET'):
+        a=todosmodel.objects.all()
+        b=todoserializer(a,many=True)
+        return Response(b.data)
+    if(request.method=='POST'):
+        a=todoserializer(data=request.data)
+        if a.is_valid():
+            a.save()
+            return Response(a.data,status=status.HTTP_201_CREATED)
+        else:
+            return Response(a.errors,status=status.HTTP_400_BAD_REQUEST)
+
+
+   path('employee/',empview())
+
+
+
+
+
+
+
+
+
+class todoserializer(serializers.ModelSerializer):
+    class Meta:
+        model=todosmodel
+        fields='__all__'
+
+
+
+
+
+
+
+
+class todosmodel(models.Model):
+    emplyeename=models.CharField(max_length=50)
+    emplyeelocation=models.CharField(max_length=50)
+    employeeprofile=models.FileField()
+    employdob=models.DateField()
+
+

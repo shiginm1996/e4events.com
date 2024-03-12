@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>e4event.com</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/0d3236b76b.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.rateyo.css' %}"/>
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.mmenu.all.css' %}" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/meanmenu.min.css' %}"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'inner-page-style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<style>
+		    #cc {
+      background-image: url({% static 'events2.avif' %});
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 400px;
+      opacity: 1;
+
+    }
+
+       input::placeholder,
+        textarea::placeholder {
+            font-size: 15px;
+            color: #0e0e0e;
+            margin-left: 5px;
+        }
+        button:hover{
+            scale: 1.1;
+        }
+
+	</style>
+
+
+</head>
+<body>
+		<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+		<header class="site-header">
+			<div class="top-header">
+				<div class="container">
+					<div class="top-header-left">
+						<div class="top-header-block">
+							<a href="mailto:info@educationpro.com" itemprop="email"><i class="fas fa-envelope"></i>  info@E4Eventpro.com</a>
+						</div>
+						<div class="top-header-block">
+							<a href="tel:+9779813639131" itemprop="telephone"><i class="fas fa-phone"></i> +91-9995552221</a>
+						</div>
+					</div>
+					<div class="top-header-right">
+						<div class="social-block">
+							<ul class="social-list">
+								<li><a href=""><i class="fab fa-viber"></i></a></li>
+								<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
+								<li><a href=""><i class="fab fa-twitter"></i></a></li>
+								<li><a href=""><i class="fab fa-skype"></i></a></li>
+							</ul>
+						</div>
+						<div >
+  							<p style="display:inline;margin-left:25px;color:white;">{{user5.name}}</p>
+<!--							<img src="/static/{{img2}}" height="60px" width="60px" style="display:inline;border-radius:10px;">-->
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- Top header Close -->
+			<div class="main-header">
+				<div class="container">
+					<div class="logo-wrap" itemprop="logo">
+						<img src="{% static 'e4events1.png' %}" alt="Logo Image" height="80px" width="200px">
+						<!-- <h1>E4Event</h1> -->
+					</div>
+					<div class="nav-wrap">
+						<nav class="nav-desktop">
+							<ul class="menu-list">
+								<li><a href="http://127.0.0.1:8000/eventapp/index/">Home</a></li>
+								<li class="menu-parent">Services
+									<ul class="sub-menu">
+										<li class="menu-parent">Occasions
+											<ul class="sub-menu">
+												<li><a href="">Wedding</a></li>
+												<li><a href="">Engagement</a></li>
+												<li><a href="">Reception</a></li>
+											</ul>
+										</li>
+										<li class="menu-parent">Parties
+											<ul class="sub-menu">
+												<li><a href="">Birthday Party</a></li>
+												<li><a href="">Bachelor Party</a></li>
+												<li><a href="">Private Party</a></li>
+											</ul>
+										</li>
+										<li class="menu-parent">Functions
+											<ul class="sub-menu">
+												<li><a href="">House Warming</a></li>
+												<li><a href="">Get Together</a></li>
+												<li><a href="">Other Family Functions</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--								<li class="menu-parent">Services-->
+<!--									<ul class="sub-menu">-->
+<!--										<li><a href="#">Child</a></li>-->
+<!--										<li><a href="#">Child</a></li>-->
+<!--									</ul>-->
+<!--								</li>-->
+								<li><a href="http://127.0.0.1:8000/eventapp/about/">About</a></li>
+								<li><a href="http://127.0.0.1:8000/eventapp/first/">Gallery</a></li>
+								<li><a href="http://127.0.0.1:8000/eventapp/contact/">Contact</a></li>
+							</ul>
+						</nav>
+						<div id="bar">
+							<i class="fas fa-bars"></i>
+						</div>
+						<div id="close">
+							<i class="fas fa-times"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+            <div class="container-fluid" style="height: auto;">
+        <div style="height: 500px;width: 50%;float: left;background-color: rgb(235, 223, 223);">
+
+            <h1 style="margin-top: 80px;text-shadow: 1px 1px 1px black;margin-left: 50px;font-size:50px;">About Us</h1>
+            <p
+                style="margin-left: 50px;justify-content: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;padding-right: 15px;font-size:15px;margin-top:20px;">
+                Welcome to <strong style="font-size: 25px;">E4Events.com</strong>, where we turn dreams into extraordinary events! With a
+                passion for creativity, a dedication to excellence, and a commitment to making every moment memorable,
+                we take pride in being your trusted partner in event planning.
+            our mission is to bring your vision to life. We believe that every
+                event is unique, and we are committed to creating bespoke experiences that reflect your personality,
+                style, and aspirations. From intimate gatherings to grand celebrations, we approach each project with
+                creativity, enthusiasm, and meticulous attention to detail.Let's collaborate to turn your ideas into reality and create moments that will be cherished for a lifetime.
+
+                Contact us today to start the journey towards your next unforgettable event!</p>
+
+            <button
+                style="height: 35px;width: 150px;background-color: rgb(64, 137, 201);margin-top: 30px;border: none;border-radius: 5px;text-shadow: 1px 1px 1px black;font-size: 15px;margin-left: 50px;">Read
+                More...</button>
+
+        </div>
+        <div style="height: 500px;width: 50%;float: left;background-color:green;">
+            <img src="{% static 'about.jpg' %}" alt="" style="height:500px;width:700px;">
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+            <!-- End of Query Section -->
+		<footer class="page-footer" itemprop="footer" itemscope itemtype="http://schema.org/WPFooter">
+			<div class="footer-first-section">
+				<div class="container">
+					<div class="box-wrap" itemprop="about">
+						<header>
+							<h1>about</h1>
+						</header>
+						<ul>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">About Us</a></li>
+
+						</ul>
+
+						<h4><a href="tel:+9779813639131"><i class="fas fa-phone"></i> +91-9995552221</a></h4>
+						<h4><a href="mailto:info@educationpro.com"><i class="fas fa-envelope"></i> info@E4Eventpro.com</a></h4>
+						<h4><a href=""><i class="fas fa-map-marker-alt"></i>Bangaluru,Karnataka</a></h4>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>links</h1>
+						</header>
+						<ul>
+							<li><a href="#">Cancellation</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Security</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Grievance Redressal</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>Social</h1>
+						</header>
+						<ul>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">Youtube</a></li>
+
+						</ul>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>quick contact</h1>
+						</header>
+						<section class="quick-contact">
+							<input type="email" name="email" placeholder="Your Email*">
+							<textarea placeholder="Type your message*"></textarea>
+							<button>send message</button>
+						</section>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of box-Wrap -->
+			<div class="footer-second-section">
+				<div class="container">
+					<hr class="footer-line">
+					<ul class="social-list">
+						<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter"></i></a></li>
+						<li><a href=""><i class="fab fa-skype"></i></a></li>
+						<li><a href=""><i class="fab fa-youtube"></i></a></li>
+						<li><a href=""><i class="fab fa-instagram"></i></a></li>
+					</ul>
+					<hr class="footer-line">
+				</div>
+			</div>
+			<div class="footer-last-section">
+				<div class="container">
+					<p>Copyright 2023 &copy; E4Eventpro.com <span> | </span> Theme designed and developed by <a href="https://labtheme.com">E4E</a></p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- <nav id="menu">
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li>
+					<span>COURSES</span>
+					<ul>
+						<li><a href="#/courses/child">Child</a></li>
+						<li><a href="#/courses/child">Child</a></li>
+						<li>
+							<span>Child</span>
+							<ul>
+								<li><a href="#/courses/child/grandChild">Grand Child</a></li>
+								<li><a href="#/courses/child/grandChild">Grand Child</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">gallery</a>
+					<ul>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">news</a>
+					<ul>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+					</ul>
+				</li>
+				<li><a href="#">about</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</nav> -->
+
+	</div>
+	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/all.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.rateyo.js' %}"></script>
+	<!-- <script type="text/javascript" src="{% static 'js/jquery.mmenu.all.js' %}"></script> -->
+	<!-- <script type="text/javascript" src="{% static 'js/jquery.meanmenu.min.js' %}"></script> -->
+	<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-image: url({% static 'images/paymentnew.png' %});
+            background-repeat: no-repeat;
+        }
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Payment Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <div class="card" style="box-shadow: 2px 2px 2px black;border-radius: 5px;margin-top: -40px;">
+          <div class="card-body">
+            <center>
+            <h2>Booking Details</h2>
+            </center>
+            <form>
+            <label for=""><b>Customer Name</b></label>
+            <input type="text" style="width: 300px;margin-left: 45px;" value="{{user.customer_name}}"><br>
+            <label for=""><b>Event Team</b></label>
+            <input type="text" style="width: 300px;margin-left: 80px;" value="{{user.event_team}}"><br>
+            <label for=""><b>Date of Booking</b></label>
+            <input type="text" style="width: 300px;margin-left: 45px;" value="{{user.event_date}}"><br>
+            <label for=""><b>Advance Payable</b></label>
+            <input type="text" style="width: 300px;margin-left: 40px;" value="20000"><br><br>
+            <center>
+            <h2 class="card-title mb-4">Payment Details</h2>
+            </center>
+
+
+              <div class="form-group">
+                <label for="card-number"><b>Card Number</b></label>
+                <input type="text" class="form-control" id="card-number" placeholder="Enter card number" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="expiration-date"><b>Expiration Date</b></label>
+                  <input type="text" class="form-control" id="expiration-date" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="cvc"><b>CVC</b></label>
+                  <input type="text" class="form-control" id="cvc" placeholder="CVC" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="name-on-card"><b>Name on Card</b></label>
+                <input type="text" class="form-control" id="name-on-card" placeholder="Full Name" required>
+              </div>
+              <label for=""><b>Confirm Payment</b></label>
+              <input type="radio" style="margin-left: 50px;" name="confirm" value="yes">Yes
+              <input type="radio" style="margin-left: 50px;" name="confirm" value="no">No<br>
+
+
+
+            </form>
+                          <a href="">Back</a>
+              <a href="http://127.0.0.1:8000/eventapp/successpage/"><button type="" class="btn btn-primary" style="margin-left: 320px;">Submit Payment</button></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Add your CSS and script links here -->
+    <!-- ... -->
+
+    <style>
+        body {
+            background-color: grey;
+            background-image: url({% static 'background2.jpg' %});
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input,
+        select {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            color: #fff;
+            background-color: rgb(62, 62, 142);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 2px black;
+        }
+
+        #success_message {
+            display: none;
+        }
+
+        .back-link {
+            margin-left: auto;
+            padding-top: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .footer {
+            background-color: black;
+            height: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .back-link {
+                margin-left: 10px;
+            }
+        }
+    </style>
+        <script>
+        function fun1(){
+                alert('Updated Successfully....')
+
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form class="well form-horizontal" action=" " method="post" id="contact_form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <a class="back-link" href="http://127.0.0.1:8000/eventapp/customer_prof/"><i class="fa-solid fa-circle-xmark" style="color:black;margin-left:650px;"><<--Back</i></a>
+            <fieldset>
+
+                <legend>
+                    <center>
+                        <h1><b>Profile Edit</b></h1>
+                    </center>
+                </legend>
+
+                <div class="form-group">
+                    <center>
+                    <h2 style="text-shadow:1px 1px 1px black">{{user.name}}</h2>
+                        </center><br>
+                    <label><b>Profile</b></label>
+                    <center>
+                    <img src="{% static img %}" height="250px" width="40%" style="margin-bottom: 10px;"><br></center>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><br>
+                        <input name="profile" placeholder="First Name" class="form-control" type="file">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Name</b></label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="first_name" placeholder="First Name" class="form-control" type="text" value="{{user.name}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Address</b></label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="address" placeholder="Address" class="form-control" type="text" value="{{user.address}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><b>District</b></label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list" ></i></span>
+                        <select name="district" class="form-control selectpicker">
+                            <option value="">Select the place</option>
+                            <option>Kasargod</option>
+                            <option>Kannur</option>
+                            <option>Kozhikod</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Username</b></label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="user_name" placeholder="Username" class="form-control" type="text" value="{{user.username}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><b>E-Mail</b></label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input name="email" placeholder="E-Mail Address" class="form-control" type="text" value="{{user.email}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Contact No.</b></label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input name="contact_no" placeholder="(+91)" class="form-control" type="text" value="{{user.phone}}">
+                    </div>
+                </div>
+
+                <div class="alert alert-success" role="alert" id="success_message">Success <i
+                        class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+                <center>
+                 <button type="submit" onclick="fun1()">Update</button>
+            </center>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+
+</html>

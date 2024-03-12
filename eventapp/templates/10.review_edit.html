@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        	body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .profile-container {
+            width: 80%;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .user-profile {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .user-profile img {
+            border-radius: 50%;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .user-profile p {
+            margin-bottom: 5px;
+        }
+
+        .profile-icons {
+            text-align: right;
+        }
+
+        .edit-profile {
+            color: #007bff;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .booking-history {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-history th, .booking-history td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .booking-history th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .review-form {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form label {
+            font-weight: bold;
+        }
+
+        .review-form select,
+        .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        .review-form button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+	</style>
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="review-form">
+        <center>
+        <h2 class="mb-4" style="font-size:40px;text-shadow:1px 1px 1px black;">Edit Your Review</h2>
+        </center>
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="form-group">
+                <label for="review" style="font-size:30px;">Name: </label>
+                <input value="{{data.cust_name}}" name="name" style="font-size:20px;width:70%; border:1px black;" >
+            </div><br>
+            <div class="form-group">
+                <label for="rating" style="font-size:30px;">Event Team:</label>
+                <select class="form-control" id="rating1" name="eteam">
+                    <option value="{{data.event_teams}}" >{{data.event_teams}}</option>
+                    {% for i in data2 %}
+                    <option value="{{i.name}}">{{i.name}}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rating" style="font-size:30px;">Your Rating:</label>
+                <select class="form-control" id="rating" name="rating">
+                    <option value="{{data.rating}}" >{{data.rating}}(choose the rate...)</option>
+                    <option value="5star">5 stars</option>
+                    <option value="4star">4 stars</option>
+                    <option value="3star">3 stars</option>
+                    <option value="2star">2 stars</option>
+                    <option value="1star">1 star</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="review" style="font-size:20px;">Your Review:</label>
+                <textarea class="form-control" id="review" name="review" rows="4" placeholder="Write your review here...">{{data.review}}</textarea>
+            </div>
+			<center>
+            <button type="submit" class="btn btn-primary" style="font-size:15px;">Update Review</button>
+			</center>
+        </form>
+    </div>
+</div>
+<br><br>
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>e4event.com</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/0d3236b76b.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.rateyo.css' %}"/>
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.mmenu.all.css' %}" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/meanmenu.min.css' %}"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'inner-page-style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+
+</head>
+<body>
+	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+		<header class="site-header">
+			<div class="top-header">
+				<div class="container">
+					<div class="top-header-left">
+						<div class="top-header-block">
+							<a href="mailto:info@educationpro.com" itemprop="email"><i class="fas fa-envelope"></i>  info@E4Eventpro.com</a>
+						</div>
+						<div class="top-header-block">
+							<a href="tel:+9779813639131" itemprop="telephone"><i class="fas fa-phone"></i> +91-9995552221</a>
+						</div>
+					</div>
+					<div class="top-header-right">
+						<div class="social-block">
+							<ul class="social-list">
+								<li><a href=""><i class="fab fa-viber"></i></a></li>
+								<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
+								<li><a href=""><i class="fab fa-twitter"></i></a></li>
+								<li><a href=""><i class="fab fa-skype"></i></a></li>
+							</ul>
+						</div>
+<!--						<div class="login-block">-->
+<!--							<a href="">Login /</a>-->
+<!--							<a href="">Register</a>-->
+<!--						</div>-->
+						<div class="dropdown">
+  							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 15px;background-color: rgb(26, 26, 116);">
+    							Login/Register
+  							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    							<li><a class="dropdown-item" href="http://127.0.0.1:8000/eventapp/userlogin/" style="color: black;font-size: 15px;"><i class="fa-solid fa-user" style="color: black;"></i> User Login</a></li>
+    							<li><a class="dropdown-item" href="http://127.0.0.1:8000/eventapp/admin_log/" style="color: black;font-size: 15px;"><i class="fa-solid fa-user" style="color: black;"></i> Admin Login</a></li>
+  							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Top header Close -->
+			<div class="main-header">
+				<div class="container">
+					<div class="logo-wrap" itemprop="logo">
+						<img src="{% static 'e4events1.png' %}" alt="Logo Image" height="80px" width="200px">
+						<!-- <h1>E4Event</h1> -->
+					</div>
+					<div class="nav-wrap">
+						<nav class="nav-desktop">
+							<ul class="menu-list">
+								<li><a href="http://127.0.0.1:8000/eventapp/index/">Home</a></li>
+								<li class="menu-parent">Services
+									<ul class="sub-menu">
+
+										<li class="menu-parent">Occasions
+											<ul class="sub-menu">
+												<li><a href="">Wedding</a></li>
+												<li><a href="">Engagement</a></li>
+												<li><a href="">Reception</a></li>
+											</ul>
+										</li>
+										<li class="menu-parent">Parties
+											<ul class="sub-menu">
+												<li><a href="">Birthday Party</a></li>
+												<li><a href="">Bachelor Party</a></li>
+												<li><a href="">Private Party</a></li>
+											</ul>
+										</li>
+										<li class="menu-parent">Functions
+											<ul class="sub-menu">
+												<li><a href="">House Warming</a></li>
+												<li><a href="">Get Together</a></li>
+												<li><a href="">Other Family Functions</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--								<li class="menu-parent">Services-->
+<!--									<ul class="sub-menu">-->
+<!--										<li><a href="#">Child</a></li>-->
+<!--										<li><a href="#">Child</a></li>-->
+<!--									</ul>-->
+<!--								</li>-->
+								<li><a href="http://127.0.0.1:8000/eventapp/about/">About</a></li>
+								<li><a href="http://127.0.0.1:8000/eventapp/first/">Gallery</a></li>
+								<li><a href="http://127.0.0.1:8000/eventapp/contact/">Contact</a></li>
+							</ul>
+						</nav>
+						<div id="bar">
+							<i class="fas fa-bars"></i>
+						</div>
+						<div id="close">
+							<i class="fas fa-times"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Close -->
+		<div class="banner">
+			<div class="owl-four owl-carousel" itemprop="image">
+				<img src="{% static 'images\wedding1.webp' %}" alt="Image of Bannner" style="height:650px;">
+				<img src="{% static 'images\eventback1.jpg' %}" alt="Image of Bannner" style="height:650px;">
+				<img src="{% static 'images\eventback2.webp' %}" alt="Image of Bannner" style="height:650px;">
+			</div>
+			<div class="container" itemprop="description">
+				<h1 style="padding-top:20px;text-shadow: 20px 20px 20px black;font-size:60px;">welcome to E4Event.com</h1>
+				<h3 style="">Single Platform for Your Dream Event</h3>
+			</div>
+			 <div id="owl-four-nav" class="owl-nav"></div>
+		</div>
+		<!-- <div class="banner">
+			<div class="owl-five owl-carousel owl-theme">
+	            <div class="item-video">
+            		<iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            		</iframe>
+	            </div>
+	            <div class="item-video">
+	            	<iframe width="100%" height="450" src="https://www.youtube.com/embed/0bfk90rWV9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	            </div>
+	            <div class="item-video">
+	            	<iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	            </div>
+	            <div class="item-video">
+            		<iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            		</iframe>
+	            </div>
+	            <div class="item-video">
+	            	<iframe width="100%" height="450" src="https://www.youtube.com/embed/0bfk90rWV9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	            </div>
+	            <div class="item-video">
+	            	<iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	            </div>
+          </div>
+		</div> -->
+		<!-- Banner Close -->
+		<div class="page-heading">
+			<div class="container">
+				<h2>popular Events</h2>
+			</div>
+		</div>
+		<!-- Popular event End -->
+   		 <div class="container" style="background-color: palevioletred;height: 50px;">
+			 <center>
+        	<h1 style="font-size: 30px;">Occasions</h1>
+			 </center>
+		 </div><Br>
+		<div class="learn-courses">
+			<div class="container">
+				<div class="courses">
+					<div class="owl-one owl-carousel">
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap" itemprop="image"><img src="{% static 'images\wedding2.jpeg' %}" alt="courses picture"  style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 55px;">Wedding >>></a>
+							<div class="box-body" itemprop="description">
+								<p>An enchanting day filled with love and promises embark on this incredible journey together.
+									We are with you for making the moment unforgetable.</p>
+
+							</div>
+						</div>
+
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap"  itemprop="image"><img src="{% static 'images\engagement.jpeg' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 50px;">Engagement >>></a>
+							<div class="box-body" itemprop="description">
+								<p>Cherishing the sweet moment ofengagement – a beautiful beginning to a lifetime of love and togetherness
+									with our dedicated colourful arrangements.</p>
+
+							</div>
+						</div>
+
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap"  itemprop="image"><img src="{% static 'images\reception.jpeg' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 50px;">Reception >>></a>
+							<div class="box-body" itemprop="description">
+								<p>An enchanting evening unfolded at wedding reception, where love took center stage.
+									The venue was adorned with elegance, echoing the beauty of the newlyweds' union. </p>
+
+							</div>
+						</div>
+
+<!--						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">-->
+<!--							<div class="img-wrap"  itemprop="image"><img src="{% static 'images/course-pic.jpg' %}" alt="courses picture"></div>-->
+<!--								<a href="#" class="learn-desining-banner" itemprop="name">Learn Web Designing >>></a>-->
+<!--							<div class="box-body" itemprop="description">-->
+<!--								<p></p>-->
+<!--								<section itemprop="time">-->
+<!--									<p><span>Duration:</span> 4 Years</p>-->
+<!--									<p><span>Class Time:</span> 6am-12am / 11am-5pm</p>-->
+<!--									<p><span>Fee:</span> 4,00,000</p>-->
+<!--								</section>-->
+<!--							</div>-->
+<!--						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Learn courses End -->
+		<div class="container" style="background-color: palevioletred;height: 50px;">
+			 <center>
+        		<h1 style="font-size: 30px;">Parties</h1>
+			 </center>
+		</div><Br>
+		<div class="learn-courses">
+			<div class="container">
+				<div class="courses">
+					<div class="owl-one owl-carousel">
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course" >
+							<div class="img-wrap" itemprop="image"><img src="{% static 'images\birthday.jpeg' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 60px;">Birthday>>></a>
+							<div class="box-body" itemprop="description">
+								<p>Celebrating trip around the sun with Surrounded by friends, laughter, and a whole lot of joy,</p>
+
+							</div>
+						</div>
+
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap"  itemprop="image"><img src="{% static 'images\bachelorparty.jpg' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 55px;">Bachelor >>></a>
+							<div class="box-body" itemprop="description">
+								<p>An unforgettable night of laughter, camaraderie, and good times as friends gathered to
+									celebrate upcoming journey into wedded bliss. </p>
+
+							</div>
+						</div>
+
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap"  itemprop="image"><img src="{% static 'images\private party.jpeg' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 60px;">Private >>></a>
+							<div class="box-body" itemprop="description">
+								<p>From the heartwarming toasts to the lively dance floor, every
+									moment radiated joy and celebration.</p>
+
+							</div>
+						</div>
+
+<!--						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">-->
+<!--							<div class="img-wrap"  itemprop="image"><img src="{% static 'images/course-pic.jpg' %}" alt="courses picture"></div>-->
+<!--								<a href="#" class="learn-desining-banner" itemprop="name">Learn Web Designing >>></a>-->
+<!--							<div class="box-body" itemprop="description">-->
+<!--								<p>Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>-->
+<!--								<section itemprop="time">-->
+<!--									<p><span>Duration:</span> 4 Years</p>-->
+<!--									<p><span>Class Time:</span> 6am-12am / 11am-5pm</p>-->
+<!--									<p><span>Fee:</span> 4,00,000</p>-->
+<!--								</section>-->
+<!--							</div>-->
+<!--						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Learn courses End -->
+		<div class="container" style="background-color: palevioletred;height: 50px;">
+			 <center>
+        		<h1 style="font-size: 30px;">Functions</h1>
+			 </center>
+		</div><Br>
+		<div class="learn-courses">
+			<div class="container">
+				<div class="courses">
+					<div class="owl-one owl-carousel">
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap" itemprop="image"><img src="{% static 'images\housewarming.jpeg' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 55px;">House Warming >>></a>
+							<div class="box-body" itemprop="description">
+								<p> The housewarming party was a celebration of new beginnings, laughter,
+									and shared moments with welcomed friends and family into our new home </p>
+
+							</div>
+						</div>
+
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap"  itemprop="image"><img src="{% static 'images\gettogether.jpeg' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 50px;">Get Together >>></a>
+							<div class="box-body" itemprop="description">
+								<p>Gathering with dear friends for a simple get-together was a breath of fresh air. Laughter echoed,
+									and conversations flowed, creating a tapestry of shared moments. </p>
+
+							</div>
+						</div>
+
+						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+							<div class="img-wrap"  itemprop="image"><img src="{% static 'images\other family.webp' %}" alt="courses picture" style="height: 280px;"></div>
+								<a href="#" class="learn-desining-banner" itemprop="name" style="margin-top: 55px;">Others Family Function>>></a>
+							<div class="box-body" itemprop="description">
+								<p>Surrounded by the warmth of family and friends, their wedding was a tapestry of joy,
+									laughter, and unforgettable moments.</p>
+
+							</div>
+						</div>
+
+<!--						<div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">-->
+<!--							<div class="img-wrap"  itemprop="image"><img src="{% static 'images/course-pic.jpg' %}" alt="courses picture"></div>-->
+<!--								<a href="#" class="learn-desining-banner" itemprop="name">Others >>></a>-->
+<!--							<div class="box-body" itemprop="description">-->
+<!--								<p>Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>-->
+<!--								<section itemprop="time">-->
+<!--									<p><span>Duration:</span> 4 Years</p>-->
+<!--									<p><span>Class Time:</span> 6am-12am / 11am-5pm</p>-->
+<!--									<p><span>Fee:</span> 4,00,000</p>-->
+<!--								</section>-->
+<!--							</div>-->
+<!--						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Learn courses End -->
+<!--		<section class="whyUs-section">-->
+<!--			<div class="container">-->
+<!--				<div class="featured-points">-->
+<!--					<ul>-->
+<!--						<li><i class="fas fa-book"></i> free books for students</li>-->
+<!--						<li><i class="fas fa-money-check-alt"></i> affordable fees</li>-->
+<!--						<li><i class="fas fa-chalkboard-teacher"></i> experienced teachers</li>-->
+<!--						<li> <i class="fas fa-book"></i> free books for students</li>-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--				<div class="whyus-wrap">-->
+<!--					<h1>why us?</h1>-->
+<!--					<p itemprop="description">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsumLorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsumLorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsumLorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsumLorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsumLorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>-->
+
+<!--					<a href="#" class="read-more-btn">read more</a>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
+<!--		&lt;!&ndash; Closed WhyUs section &ndash;&gt;-->
+		<section class="page-heading">
+			<div class="container">
+				<h2>gallery</h2>
+			</div>
+		</section>
+		<section class="gallery-images-section" itemprop="image" itemscope itemtype=" http://schema.org/ImageGallery">
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img1.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\wedding2.jpeg' %}" alt="gallery-images" width="350px" style="margin-left: 30px;margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img2.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\eventimage2.jpg' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img3.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\eventimage3.jpeg' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img4.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\housewarming.jpeg' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img5.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event4.jpg' %}" alt="gallery-images" width="350px" style="margin-left: 30px;margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img6.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event5.jpeg' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img7.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event6.webp' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img8.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event8.jpeg' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img9.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event10.jpg' %}" alt="gallery-images" width="350px" style="margin-left: 30px;margin-top: 30px;	">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img10.jpg' 5}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event11.jpg' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img11.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event12.webp' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="{% static 'images/gallery-img12.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+					<img src="{% static 'images\event13.jpg' %}" alt="gallery-images" width="350px" style="margin-top: 30px;">
+				</a>
+			</div>
+		</section>
+		<!-- End of gallery Images -->
+		<section class="page-heading">
+			<div class="container">
+
+			</div>
+		</section>
+<!--		<section class="events-section" itemprop="event" itemscope itemtype=" http://schema.org/Event">-->
+<!--			<div class="container">-->
+<!--				<div class="event-wrap">-->
+<!--					<div class="img-wrap" itemprop="image">-->
+<!--						<img src="{% static 'images/events.jpg' %}" alt="event images">-->
+<!--					</div>-->
+<!--					<div class="details">-->
+<!--						<a href=""><h3 itemprop="name">Orientation Programme for new Students.</h3></a>-->
+<!--						<p itemprop="description">Orientation Programme for new sffs Students. Orientation Programme for new sffs Students. Orientation Programme for new sffs Students.</p>-->
+
+<!--						<h5 itemprop="startDate"><i class="far fa-clock"></i> Dec 30,2018 | 11am</h5>-->
+<!--						<h5 itemprop="location"><i class="fas fa-map-marker-alt"></i> Hotel Malla, Lainchaur</h5>-->
+<!--					</div>-->
+<!--				</div>-->
+
+<!--				<div class="event-wrap">-->
+<!--					<div class="img-wrap" itemprop="image">-->
+<!--						<img src="{% static 'images/events.jpg' %}" alt="event images">-->
+<!--					</div>-->
+<!--					<div class="details">-->
+<!--						<a href=""><h3 itemprop="name">Orientation Programme for new Students.</h3></a>-->
+<!--						<p itemprop="description">Orientation Programme for new sffs Students. Orientation Programme for new sffs Students. Orientation Programme for new sffs Students.</p>-->
+
+<!--						<h5 itemprop="startDate"><i class="far fa-clock"></i> Dec 30,2018 | 11am</h5>-->
+<!--						<h5 itemprop="location"><i class="fas fa-map-marker-alt"></i> Hotel Malla, Lainchaur</h5>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
+		<!-- End of Events section -->
+		<section class="what-other-say">
+			<!-- <div class="container">
+				<div class="wrap-others-say" itemprop="review" itemscope itemtype="http://schema.org/ReviewAction">
+					<h1>what other say about us</h1>
+					<div id="carousel" class="flexslider">
+						<ul class="slides">
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="hidden">
+										<h3>Sagar Sapkota</h3>
+										<h4>UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="hidden">
+										<h3>Sagar Sapkota</h3>
+										<h4>UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="hidden">
+										<h3>Sagar Sapkota</h3>
+										<h4>UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="hidden">
+										<h3>Sagar Sapkota</h3>
+										<h4>UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="hidden">
+										<h3>Sagar Sapkota</h3>
+										<h4>UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="hidden">
+										<h3>Sagar Sapkota</h3>
+										<h4>UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="hidden">
+										<h3>Sagar Sapkota</h3>
+										<h4>UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="img-wrap">
+								<figure itemprop="image">
+									<img src="{% static 'images/review-big-img.jpg' %}" alt="Person Image">
+									<figcaption class="fig">
+										<h3 class="hidden">Sagar Sapkota</h3>
+										<h4 class="hidden">UI Designer</h4>
+									</figcaption>
+								</figure>
+							</li>
+						</ul>
+					</div>
+
+					<div id="slider" class="flexslider">
+	  					<ul class="slides">
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">Amazing service and amazing team. Thank you!</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">Very Satisfaied with their service</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">Quick, efficient and meets your expectations</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">The website was according our imagination</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">Amazing service and amazing team. Thank you!</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">Very Satisfaied with their service</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">Quick, efficient and meets your expectations</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+						    <li>
+						    	<div class="testimonial-holder" itemprop="description">
+						    		<strong class="title">The website was according our imagination</strong>
+						    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fer-<br/>mentum mauris, non tincidunt arcu venenatis vel. Nam et vehicula turpis. Ut nunc purus, mattis eu odio a, egestas facilisis nibh. Mauris magna diam, iaculis vitae sapien non, pharetra congue purus. Phasellus in odio purus.</p>
+						    		<div class="rateYo"></div>
+						    	</div>
+						    </li>
+	  					</ul>
+					</div>
+				</div>
+			</div> -->
+			<div class="container">
+				<h4 class="article-subtitle">Get to Know</h4>
+				<h2 class="head">what customer say</h2>
+				<div class="three owl-carousel owl-theme">
+					<div class="customer-item" itemscope itemtype="http://schema.org/Rating">
+						<div class="border">
+							<div class="customer">
+								<figure>
+									<img class="customer-img" src="{% static 'images\customer 1.png' %}" alt="Person image">
+									<figcaption>
+										<span itemprop="author">Joseph K C</span>
+										<div class="rateYo" itemprop="ratingValue"></div>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="customer-review">
+								<p itemprop="description">
+									A huge shoutout to the team for making our wedding day absolutely magical!
+									The attention to detail was remarkable, and they took care of every aspect, allowing
+									us to enjoy the celebration stress-free. The team's creativity and dedication truly
+									made our day unforgettable. We're so grateful for their expertise
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="customer-item" itemscope itemtype="http://schema.org/Rating">
+						<div class="border">
+							<div class="customer">
+								<figure>
+									<img class="customer-img" src="{% static 'images\customer2.png' %}" alt="Person image">
+									<figcaption>
+										<span itemprop="author">AISWARYA K</span>
+										<div class="rateYo" itemprop="ratingValue"></div>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="customer-review">
+								<p itemprop="description">
+									"We choosed this website for our daughter's birthday, and it was amazing!
+									They made the party colorful, fun, and stress-free. Everything looked fantastic,
+									and our guests loved it. It was a special day, and we're grateful to [Happy Moments Events]
+									for making it so memorable!"
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End of Others talk -->
+		<section class="page-heading">
+			<div class="container">
+<!--				<h2>latest news</h2>-->
+			</div>
+		</section>
+<!--		<section class="latest-news">-->
+<!--			<div class="container" itemprop="event" itemscope itemtype=" http://schema.org/Event">-->
+<!--				<div class="owl-two owl-carousel">-->
+<!--					<div class="news-wrap" itemprop="event">-->
+<!--						<div class="news-img-wrap" itemprop="image">-->
+<!--							<img src="{% static 'images/latest-new-img.jpg' %}" alt="Latest News Images">-->
+<!--						</div>-->
+<!--						<div class="news-detail" itemprop="description">-->
+<!--							<a href=""><h1>Orientation Programme for new Students.</h1></a>-->
+<!--							<h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>-->
+
+<!--							<p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--					<div class="news-wrap" itemprop="event">-->
+<!--						<div class="news-img-wrap" itemprop="image">-->
+<!--							<img src="{% static 'images/latest-new-img.jpg' %}" alt="Latest News Images">-->
+<!--						</div>-->
+<!--						<div class="news-detail" itemprop="description">-->
+<!--							<a href=""><h1>Orientation Programme for new Students.</h1></a>-->
+<!--							<h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>-->
+
+<!--							<p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--					<div class="news-wrap" itemprop="event">-->
+<!--						<div class="news-img-wrap" itemprop="image">-->
+<!--							<img src="{% static 'images/latest-new-img.jpg' %}" alt="Latest News Images">-->
+<!--						</div>-->
+<!--						<div class="news-detail" itemprop="description">-->
+<!--							<a href=""><h1>Orientation Programme for new Students.</h1></a>-->
+<!--							<h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>-->
+
+<!--							<p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
+		<!-- Latest News CLosed -->
+		<section class="query-section">
+			<div class="container">
+				<p>Any Queries? Ask us a question at<a href="tel:+9779813639131"><i class="fas fa-phone"></i> +91-9995552221</a></p>
+			</div>
+		</section>
+		<!-- End of Query Section -->
+		<footer class="page-footer" itemprop="footer" itemscope itemtype="http://schema.org/WPFooter">
+			<div class="footer-first-section">
+				<div class="container">
+					<div class="box-wrap" itemprop="about">
+						<header>
+							<h1>about</h1>
+						</header>
+						<ul>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">About Us</a></li>
+
+						</ul>
+
+						<h4><a href="tel:+9779813639131"><i class="fas fa-phone"></i> +91-9995552221</a></h4>
+						<h4><a href="mailto:info@educationpro.com"><i class="fas fa-envelope"></i> info@E4Eventpro.com</a></h4>
+						<h4><a href=""><i class="fas fa-map-marker-alt"></i>Bangaluru,Karnataka</a></h4>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>links</h1>
+						</header>
+						<ul>
+							<li><a href="#">Cancellation</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Security</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Grievance Redressal</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>Social</h1>
+						</header>
+						<ul>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">Youtube</a></li>
+
+						</ul>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>quick contact</h1>
+						</header>
+						<section class="quick-contact">
+							<input type="email" name="email" placeholder="Your Email*">
+							<textarea placeholder="Type your message*"></textarea>
+							<button>send message</button>
+						</section>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of box-Wrap -->
+			<div class="footer-second-section">
+				<div class="container">
+					<hr class="footer-line">
+					<ul class="social-list">
+						<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter"></i></a></li>
+						<li><a href=""><i class="fab fa-skype"></i></a></li>
+						<li><a href=""><i class="fab fa-youtube"></i></a></li>
+						<li><a href=""><i class="fab fa-instagram"></i></a></li>
+					</ul>
+					<hr class="footer-line">
+				</div>
+			</div>
+			<div class="footer-last-section">
+				<div class="container">
+					<p>Copyright 2023 &copy; E4Eventpro.com <span> | </span> Theme designed and developed by <a href="https://labtheme.com">E4E</a></p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- <nav id="menu">
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li>
+					<span>COURSES</span>
+					<ul>
+						<li><a href="#/courses/child">Child</a></li>
+						<li><a href="#/courses/child">Child</a></li>
+						<li>
+							<span>Child</span>
+							<ul>
+								<li><a href="#/courses/child/grandChild">Grand Child</a></li>
+								<li><a href="#/courses/child/grandChild">Grand Child</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">gallery</a>
+					<ul>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">news</a>
+					<ul>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Child</a></li>
+					</ul>
+				</li>
+				<li><a href="#">about</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</nav> -->
+
+	</div>
+	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/all.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.rateyo.js' %}"></script>
+	<!-- <script type="text/javascript" src="{% static 'js/jquery.mmenu.all.js' %}"></script> -->
+	<!-- <script type="text/javascript" src="{% static 'js/jquery.meanmenu.min.js' %}"></script> -->
+	<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
